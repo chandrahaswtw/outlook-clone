@@ -3,7 +3,7 @@ import './App.css';
 import {observer} from 'mobx-react-lite';
 
 var App : React.FC = observer(() => {
-
+ console.log("HEY")
     return (
       <div>
         <p>HI</p>
