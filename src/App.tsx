@@ -1,14 +1,11 @@
 import React from 'react';
 import './App.css';
-import {observer} from 'mobx-react-lite';
+import Root from './Components/Root';
 
-var App : React.FC = observer(() => {
- console.log("HEY")
-    return (
-      <div>
-        <p>HI</p>
-      </div>
-    )
-})
+var App: React.FC = () => {
+  return (
+    <Root></Root>
+  )
+}
 
 export default App;

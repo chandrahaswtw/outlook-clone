@@ -1,0 +1,36 @@
+@import './../../Utils/colors';
+
+.wrapper {
+    height: 100%;
+    border-right: 1.2px solid $cloud;
+    
+    header {
+        height : 55px;
+        padding : 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1.2px solid $cloud;
+
+        span:nth-child(1){
+            font-weight: 600;
+        }
+
+        span:nth-child(2){
+            font-weight: 400;
+            font-size: 0.8em;
+            display: inline-block;
+            padding : 5px;
+            transition: all 200ms ease-out;
+            cursor: pointer;
+            &:hover {
+                background-color: $cloud;
+                border-radius: 3px;
+            }
+        }
+    }
+    main{
+        height: calc(100% - 55px);
+        overflow-y: auto;
+    }
+}

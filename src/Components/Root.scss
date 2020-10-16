@@ -1,0 +1,27 @@
+.root-wrapper {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    min-width: 1200px;
+    overflow: hidden;
+    grid-template-rows: 50px auto;
+    grid-template-columns: 20% 25% auto;
+    grid-template-areas: "HEADER HEADER HEADER"
+                        "FOLDERS MAILLIST MAILBODY";
+}
+
+.root-header {
+    grid-area: HEADER;
+}
+
+.root-folders{
+    grid-area: FOLDERS;
+}
+
+.root-maillist{
+    grid-area: MAILLIST;
+}
+
+.root-mailbody{
+    grid-area: MAILBODY;
+}
