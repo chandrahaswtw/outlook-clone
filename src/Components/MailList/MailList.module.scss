@@ -100,6 +100,30 @@
     }
 }
 
+.fallBackStyles {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    span:nth-child(2){
+        font-weight: 600;
+        font-size: 0.9em;
+        margin: 20px 0 10px 0;
+    }
+
+    span:nth-child(3){
+        font-weight: 400;
+        font-size: 0.8em;
+    }
+
+    img {
+        width: 80%;
+        object-fit: cover;
+    }
+}
+
 .iconStyles {
     margin-right: 5px;
     color: $dark-blue;

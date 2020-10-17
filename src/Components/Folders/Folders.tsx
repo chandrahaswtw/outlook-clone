@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useContext, useMemo } from 'react';
 import classes from './Folders.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCaretRight, faInbox, faBan, faFolder, faExternalLinkAlt, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretRight, faInbox, faBan, faFolder, faExternalLinkAlt, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { observer } from 'mobx-react-lite';
 import { MailContext } from './../../Store/MailContext';
 import Badge from './../../UI/Badge/Badge';
@@ -11,7 +11,7 @@ const Folders: React.FC = observer(props => {
 
     const mailData = useContext(MailContext);
     const unreadCount = mailData.getUnreadCount;
-    const {selectedFolder} =  mailData;
+    const { setFolder, selectedFolder } = mailData;
 
     const [contentOpen, setContentOpen] = useState<boolean>(true);
 
@@ -43,14 +43,13 @@ const Folders: React.FC = observer(props => {
                     break;
             }
             return (
-                <li onClick={() => { mailData.selectedFolder = type }} className={selectedFolder === type ? classes.visited : ""}>
+                <li onClick={() => { setFolder(type) }} className={selectedFolder === type ? classes.visited : ""}>
                     <span><FontAwesomeIcon icon={icon} className={classes.innerIconStyles} /> {type} </span>
                     {unreadCount[index] > 0 && <Badge>{unreadCount[index]}</Badge>}
                 </li>
             )
         })
-    }, [mailData, unreadCount, selectedFolder])
-
+    }, [unreadCount, selectedFolder, setFolder])
 
     return (
         <div className={classes.wrapper}>

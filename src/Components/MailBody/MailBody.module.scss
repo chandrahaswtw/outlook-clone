@@ -1,16 +1,16 @@
-@import './../../Utils/colors';
+@import "./../../Utils/colors";
 
 .wrapper {
     width: 100%;
     height: 100%;
 
-    img{
+    img {
         width: 50%;
         object-fit: cover;
     }
 }
 
-.noMailContentWrapper{
+.noMailContentWrapper {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -26,5 +26,29 @@
     div:nth-child(3) {
         font-weight: 400;
         font-size: 0.8em;
+    }
+}
+
+.mainBody {
+    padding: 1rem;
+    .profileHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .profileIconStyles {
+        color: $cloud;
+    }
+    .deleteIconStyles {
+        color: $dark-grey;
+        cursor: pointer;
+        &:hover {
+            color: black;
+        }
+    }
+    hr {
+        border: none;
+        height: 2px;
+        background-color: $cloud;
     }
 }

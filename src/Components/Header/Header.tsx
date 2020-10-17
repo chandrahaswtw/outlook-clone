@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Header.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWindows } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWindows } from '@fortawesome/free-brands-svg-icons';
 
 const Header: React.FC = props => {
     return (

@@ -1,24 +1,24 @@
-import React, { useContext,useCallback } from 'react';
+import React, { useContext, useCallback } from 'react';
 import classes from './MailList.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { observer } from 'mobx-react-lite';
 import { MailContext } from './../../Store/MailContext';
-import { faTrashAlt, faEnvelope, faEnvelopeOpen, faFlag } from '@fortawesome/free-solid-svg-icons'
+import { faTrashAlt, faEnvelope, faEnvelopeOpen, faFlag } from '@fortawesome/free-solid-svg-icons';
+import noMail from './../../Assets/Images/nomail.svg';
 
 const MailList: React.FC = observer(props => {
 
     const mailData = useContext(MailContext);
+    const { setID } = mailData;
 
-    console.log(mailData.selectedID);
+    const mailOnClickHandler = useCallback((mID: string) => {
+        setID(mID);
+    }, [setID])
 
-    const mailOnClickHandler = useCallback((mID : string) =>{
-        mailData.selectedID = mID;
-    },[mailData])
-
-    const generateMailList = useCallback(() : JSX.Element => {
-        return (<ul>
-            {mailData.getMailData.map((el, index) => {
+    const generateMailList = useCallback((): JSX.Element[] => {
+        return (
+            mailData.getMailData.map((el, index) => {
                 return (
                     <li className={el.unread ? classes.notVisited : ""} onClick={mailOnClickHandler.bind(null, el.mId)}>
                         <div className={classes.iconTitleWrapper}>
@@ -33,10 +33,20 @@ const MailList: React.FC = observer(props => {
                         <div className={classes.subjectContent}>{el.content.replace(/<.*?>/, "")}</div>
                     </li>
                 )
-            })}
-        </ul>)
-    },[mailData, mailOnClickHandler])
+            }))
+    }, [mailData, mailOnClickHandler])
 
+    const fallBackJSX = (): JSX.Element => {
+        return (
+            <div className={classes.fallBackStyles}>
+                <img src={noMail} alt="nothing present here" />
+                <span>Nothing in {mailData.selectedFolder.toLowerCase()}.</span>
+                <span>Looks empty over here!</span>
+            </div>
+        )
+    }
+
+    console.log(generateMailList().length)
 
     return (
         <div className={classes.wrapper}>
@@ -48,7 +58,11 @@ const MailList: React.FC = observer(props => {
                     Filter <FontAwesomeIcon icon={faCaretDown} />
                 </span>
             </header>
-            <main>{generateMailList()}</main>
+            <main>
+                <ul>
+                    {generateMailList().length ? generateMailList() : fallBackJSX()}
+                </ul>
+            </main>
         </div>
     )
 })

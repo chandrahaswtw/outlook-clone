@@ -32,6 +32,20 @@ export class MailStore {
         this.spamData = param;
     }
 
+    // SET ID
+    @action
+    setID = (id: string) => {
+        this.selectedID = id;
+    }
+
+    // SET SELECTED FOLDER FOLDER
+    @action
+    setFolder = (folderName: FOLDER_TYPES) => {
+        this.selectedFolder = folderName;
+        this.selectedID = "";
+    }
+
+    // ******** COMPUTED DATA ***********
     // SET INBOX DATA
     @computed
     get getMailData() {
@@ -59,7 +73,7 @@ export class MailStore {
         let spamUnreadCount = toJS(this.spamData).filter(el => el.unread).length;
         let deletedUnreadCount = toJS(this.deletedData).filter(el => el.unread).length;
         let otherUnreadCount = toJS(this.otherData).filter(el => el.unread).length;
-        return [inboxUnreadCount, spamUnreadCount, deletedUnreadCount,  otherUnreadCount]
+        return [inboxUnreadCount, spamUnreadCount, deletedUnreadCount, otherUnreadCount]
     }
 
 }
