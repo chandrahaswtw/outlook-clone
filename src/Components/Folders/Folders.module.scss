@@ -1,14 +1,15 @@
 @import "./../../Utils/colors";
 
 // RE-USABLE CODE
-@mixin navTextStyles($font-weight: 600, $font-size : 1em, $padding : 10px) {
+@mixin navTextStyles($font-weight: 600, $font-size: 1em, $padding: 10px) {
     padding: $padding;
     color: $white;
     font-weight: $font-weight;
     font-size: $font-size;
     cursor: pointer;
+    transition: all 200ms ease-in;
 
-    &:hover {
+    &:hover, &.visited {
         background-color: rgba(255, 255, 255, 0.1);
     }
 }
@@ -44,30 +45,36 @@
         margin: 0;
 
         li {
-          @include navTextStyles(300, 0.85em, 10px 20px);
-          .innerIconStyles {
-              margin-right : 10px
-          }
+            @include navTextStyles(300, 0.85em, 10px 20px);
+            span:first-child {
+                font-size: inherit;
+            }
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .innerIconStyles {
+                margin-right: 10px;
+            }
         }
     }
 }
 
 .footer {
-    padding : 10px;
-    border : 2px $dark-grey dashed;
+    padding: 10px;
+    border: 2px $dark-grey dashed;
     border-radius: 5px;
     margin: 1rem 1.5rem;
     font-size: 0.7em;
-    color : $white;
+    color: $white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    a{
-        font-size: inherit;
+    a {
+        font-size: 1.2em;
         display: block;
-        padding : 2px;
+        padding: 2px;
         text-decoration: none;
         background-color: $medium-grey;
         border-radius: 3px;
@@ -76,7 +83,7 @@
         color: black;
 
         svg {
-            color : $header-blue
+            color: $header-blue;
         }
     }
 }

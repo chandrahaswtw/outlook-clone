@@ -3,8 +3,7 @@
     height: 100vh;
     width: 100vw;
     min-width: 1200px;
-    overflow: hidden;
-    grid-template-rows: 50px auto;
+    grid-template-rows: 50px calc(100vh - 50px);
     grid-template-columns: 20% 25% auto;
     grid-template-areas: "HEADER HEADER HEADER"
                         "FOLDERS MAILLIST MAILBODY";

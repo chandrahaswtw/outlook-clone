@@ -1,26 +1,27 @@
-@import './../../Utils/colors';
+@import "./../../Utils/colors";
+@import "./../../Utils/resuables";
 
 .wrapper {
     height: 100%;
     border-right: 1.2px solid $cloud;
-    
+
     header {
-        height : 55px;
-        padding : 10px;
+        height: 55px;
+        padding: 10px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         border-bottom: 1.2px solid $cloud;
 
-        span:nth-child(1){
+        span:nth-child(1) {
             font-weight: 600;
         }
 
-        span:nth-child(2){
+        span:nth-child(2) {
             font-weight: 400;
             font-size: 0.8em;
             display: inline-block;
-            padding : 5px;
+            padding: 5px;
             transition: all 200ms ease-out;
             cursor: pointer;
             &:hover {
@@ -29,8 +30,77 @@
             }
         }
     }
-    main{
+    main {
         height: calc(100% - 55px);
-        overflow-y: auto;
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            overflow-y: auto;
+            @include customScrollBar;
+
+            li {
+                margin: 0;
+                padding: 10px 1rem 10px 12px;
+                border-bottom: 1.2px solid $cloud;
+                border-left: 4px solid transparent;
+                transition: all 200ms ease-out;
+                &:hover {
+                    background-color: $cloud;
+                }
+
+                &.notVisited {
+                    border-left-color: $medium-blue;
+                }
+
+                .iconTitleWrapper {
+                    display: flex;
+                    justify-content: space-between;
+                    .mId {
+                        @include textOverflow;
+                        font-size: 0.9em;
+                        max-width: 60%;
+                    }
+
+                    .iconWrapper {
+                        display: none;
+                        font-size: 0.8em;
+                        .iconStyles {
+                            margin-left: 5px;
+                            cursor: pointer;
+                            color: $dark-grey;
+
+                            &:hover {
+                                color: black;
+                            }
+                        }
+                    }
+                }
+
+                .subjectContent {
+                    @include textOverflow;
+                    font-size: 0.85em;
+                    color: $dark-grey;
+
+                    &.notVisited {
+                        color: $medium-blue;
+                        font-weight: 600;
+                    }
+                }
+
+                &:hover {
+                    .iconWrapper {
+                        display: block;
+                    }
+                }
+            }
+        }
     }
+}
+
+.iconStyles {
+    margin-right: 5px;
+    color: $dark-blue;
 }
