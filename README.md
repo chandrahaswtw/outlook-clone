@@ -4,9 +4,9 @@ It's developed using React (Typescript). You can have a [quick look here!](https
 
 ### PACKAGES USED
 - **mobx** and **mobx-react-lite** for state management.
-- For icons, I've used **react-fontawesome** library.
-- **node-sass** as CSS Precompiler
-- No other extra packages used apart from these.
+- **react-fontawesome** library for icons.
+- **node-sass** as CSS Precompiler.
+- None other extra packages were used apart from these.
 
 ### The app resembles the Microsoft outlook with the following features:
 
