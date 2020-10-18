@@ -7,5 +7,3 @@ export const MailProvider : React.FC<React.PropsWithChildren<{}>> = props => {
             {props.children}
         </MailContext.Provider>
 }
-
-

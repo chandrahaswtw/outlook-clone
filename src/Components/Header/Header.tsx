@@ -3,6 +3,7 @@ import classes from './Header.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWindows } from '@fortawesome/free-brands-svg-icons';
 
+// MAIN HEADER
 const Header: React.FC = props => {
     return (
         <nav className={classes.wrapper}>

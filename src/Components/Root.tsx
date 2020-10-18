@@ -12,12 +12,13 @@ import { MailContext } from './../Store/MailContext';
 import inboxJSONData from './../Assets/JSONData/inbox.json';
 import spamJSONData from './../Assets/JSONData/spam.json';
 
+// ROOT FOLDER
 const Root: React.FC = props => {
 
     let mailData = useContext(MailContext);
 
+    // PERFECT PLACE TO MAKE A SERVICE CALL. WE ARE CURRENTLY LOADING DATA FROM JSON INSTEAD !!
     useEffect(() => {
-        // PERFECT PLACE TO MAKE A SERVICE CALL. WE ARE CURRENTLY LOADING DATA FROM JSON INSTEAD !!
         mailData.setInboxData(inboxJSONData);
         mailData.setSpamData(spamJSONData);
     }, [mailData])

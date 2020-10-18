@@ -35,6 +35,27 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        .outerFlex{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .innerFlex{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                margin-left: 1rem;
+                justify-content: space-around;
+
+                span:nth-child(1){
+                    font-weight: 300;
+                };
+
+                span:nth-child(2){
+                    font-weight: 600;
+                }   
+            }
+        }
     }
     .profileIconStyles {
         color: $cloud;
@@ -48,7 +69,14 @@
     }
     hr {
         border: none;
-        height: 2px;
+        height: 1px;
         background-color: $cloud;
+    }
+    main {
+        padding: 0.8rem 0.5rem;
+        .dangerousDiv {
+            white-space: pre-line;
+            font-size: 0.9em;
+        }
     }
 }

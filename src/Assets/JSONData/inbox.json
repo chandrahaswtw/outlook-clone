@@ -3,12 +3,48 @@
 		"mId": "guid-1",
 		"unread": true,
 		"subject" : "Training Program",
-		"content" : "About Microsoft Virtual Academy \n Microsoft Virtual Academy provides free online training by world-class experts to help you build your technical skills and advance your career. Make it your destination of choice to get started on the latest Microsoft technologies and join this vibrant community."
+		"content" : "About Microsoft Virtual Academy. \n Microsoft Virtual Academy provides free online training by world-class experts to help you build your technical skills and advance your career. Make it your destination of choice to get started on the latest Microsoft technologies and join this vibrant community."
 	},
 	{
 		"mId": "guid-2",
-		"unread": false,
+		"unread": true,
 		"subject" : "Empower your future",
 		"content" : "We foster our pipeline of future leaders with 47 employee networks and 7 global employee resource groups, servicing an active community of thousands across Microsoft"
+	},
+	{
+		"mId": "guid-5",
+		"unread": true,
+		"subject" : "RANDOM QUOTE 1",
+		"content" : "Life would be a great deal easier if dead things had the decency to remain dead. <br><br> - <i>Doug MacLeod</i>"
+	},
+	{
+		"mId": "guid-6",
+		"unread": false,
+		"subject" : "RANDOM QUOTE 2",
+		"content" : "I'm unpredictable, I never know where I'm going until I get there, I'm so random, I'm always growing, learning, changing, I'm never the same person twice. But one thing you can be sure of about me; is I will always do exactly what I want to do. <br><br> - <i>C. JoyBell C</i>"
+	},
+	{
+		"mId": "guid-7",
+		"unread": false,
+		"subject" : "RANDOM QUOTE 3",
+		"content" : "Insane means fewer cameras! <br><br> - <i>Ally Carter, Only the Good Spy Young</i>"
+	},
+	{
+		"mId": "guid-8",
+		"unread": false,
+		"subject" : "RANDOM QUOTE 4",
+		"content" : "A musician must make music, an artist must paint, a poet must write, if he is to be ultimately at peace with himself. What a man can be, he must be. <br><br> - <i>Abraham Maslow</i> "
+	},
+	{
+		"mId": "guid-9",
+		"unread": false,
+		"subject" : "RANDOM QUOTE 5",
+		"content" : "What have I become? \n My sweetest friend; \n everyone I know goes away in the end.\n And you could have it all:\n my empire of dirt.\n I will let you down.\n I will make you hurt.\n\n - <i>Nine Inch Nails</i>"
+	},
+	{
+		"mId": "guid-10",
+		"unread": false,
+		"subject" : "RANDOM QUOTE 6",
+		"content" : "Luck is not as random as you think. \n Before that lottery ticket won the jackpot, someone had to buy it. \n\n\n - <i>Vera Nazarian</i> "
 	}
 ]
