@@ -1,6 +1,32 @@
 # OUTLOOK CLONE
 
+You can have a [quick look here!](https://outlook-clone.netlify.app/)
 
+The app resembles the Microsoft outlook with the following features:
+
+- The email client can have multiple mail folders
+- We assume the following mail folders to be present:
+    - Inbox
+    - Spam
+    - Deleted Items
+    - Custom Folder
+- The starting data of this application can be assumed to come from a JSON file. As an example, we have 2 JSON files in Asssets folder.
+    - inbox.json
+    - spam.json
+- Each of the element in the JSON file represents a mail
+    - subject: The mail subject which is a string
+    - content: The mail content which is a string and can contain html.
+    - mId: The mail Id of this mail which can be assumed to be unique Guid string
+    - unread: boolean
+- The client should have the following features
+    - When the app starts, the app loads the contents of each folder and displays the unread counts. 
+    - User can move around within the app to Inbox, Spam and Custom Folder.
+    - User can select any mail and look into the contents.
+    - User can see a brief preview before clicking on it.
+    - User can delete a message. In which case it should come in deleted items.
+    - User can flag a message.
+    - User can filter on inbox on whether a message is flagged or not. 
+    - State, navigation should be saved between refreshes.
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
