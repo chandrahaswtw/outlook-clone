@@ -1,5 +1,6 @@
 import { observable, action, makeObservable, toJS, computed } from 'mobx';
 import { mailStructure, FOLDER_TYPES } from './../Utils/models';
+import {localStorageSync} from './MailProvider'
 
 export class MailStore {
 
@@ -22,18 +23,7 @@ export class MailStore {
         this.selectedFolder = FOLDER_TYPES.INBOX;
         this.flagIds = [];
         this.flagFilter = false;
-    }
-
-    // SET THE INBOX DATA
-    @action
-    setInboxData = (param: mailStructure[]) => {
-        this.inboxData = param;
-    }
-
-    // SET THE SPAM DATA
-    @action
-    setSpamData = (param: mailStructure[]) => {
-        this.spamData = param;
+        localStorageSync(this);
     }
 
     // SET ID
@@ -163,3 +153,4 @@ export class MailStore {
     }
 
 }
+
