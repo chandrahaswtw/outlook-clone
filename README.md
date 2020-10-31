@@ -1,6 +1,6 @@
 # OUTLOOK CLONE
 
-It's developed using React (Typescript). You can have a [quick look here!](https://outlook-clone.netlify.app/)
+It's developed using React (Typescript). You can have a [quick look here!](https://chandrahaswtw.github.io/outlook-clone/)
 
 ### PACKAGES USED
 - **mobx** and **mobx-react-lite** for state management.
