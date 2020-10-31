@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/outlook-clone/static/css/main.29607a16.chunk.css",
+    "main.js": "/outlook-clone/static/js/main.73170d54.chunk.js",
+    "main.js.map": "/outlook-clone/static/js/main.73170d54.chunk.js.map",
+    "runtime-main.js": "/outlook-clone/static/js/runtime-main.cc83303d.js",
+    "runtime-main.js.map": "/outlook-clone/static/js/runtime-main.cc83303d.js.map",
+    "static/js/2.217c3f35.chunk.js": "/outlook-clone/static/js/2.217c3f35.chunk.js",
+    "static/js/2.217c3f35.chunk.js.map": "/outlook-clone/static/js/2.217c3f35.chunk.js.map",
+    "index.html": "/outlook-clone/index.html",
+    "precache-manifest.32bf6bb7e5e9bcaaa54dadfe43f97304.js": "/outlook-clone/precache-manifest.32bf6bb7e5e9bcaaa54dadfe43f97304.js",
+    "service-worker.js": "/outlook-clone/service-worker.js",
+    "static/css/main.29607a16.chunk.css.map": "/outlook-clone/static/css/main.29607a16.chunk.css.map",
+    "static/js/2.217c3f35.chunk.js.LICENSE.txt": "/outlook-clone/static/js/2.217c3f35.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/outlook-clone/static/media/OpenSans-SemiBold.ba5cde21.ttf",
+    "static/media/envelope.svg": "/outlook-clone/static/media/envelope.0b6ed872.svg",
+    "static/media/nomail.svg": "/outlook-clone/static/media/nomail.d9d021d5.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cc83303d.js",
+    "static/js/2.217c3f35.chunk.js",
+    "static/css/main.29607a16.chunk.css",
+    "static/js/main.73170d54.chunk.js"
+  ]
+}
