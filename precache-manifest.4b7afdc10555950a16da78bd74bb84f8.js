@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "889e6b10b487a2923cb73ea3178d12c2",
+    "revision": "bac0a8e7d49220ed77ad616703078b9e",
     "url": "/outlook-clone/index.html"
   },
   {
